@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>paiza掲示板</title>
+	<title>試作1</title>
 	<!-- bootstrap CDN -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -22,8 +22,8 @@
 		<div id="main">
 			<?php
 			// データベースに接続する
-			$pdo = new PDO("mysql:host=127.0.0.1;dbname=lesson;charset=utf8", "root", "");
-			// print_r($_POST);
+			$pdo = new PDO("mysql:host=127.0.0.1;dbname=portfolio;charset=utf8", "root", "");
+			//print_r($_POST);
 
 			// 受け取ったidのレコードの削除
 			if (isset($_POST["delete_id"])) {
@@ -45,7 +45,7 @@
 				$stmt -> execute();
 			} ?>
 
-			<h1>paiza掲示板</h1>
+			<h1>ひとこと掲示板</h1>
 
 			<h2>投稿フォーム</h2>
 			<form class="form" action="index.php" method="post">
